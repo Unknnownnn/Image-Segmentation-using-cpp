@@ -40,7 +40,7 @@ The contour evolution is driven by three forces:
 
 In our implementation, we use Canny edge detection to guide the snake. We also apply contour selection, iterative contour updates, and visual feedback to finalize the segmentation. The method is capable of handling moderately complex shapes and is resistant to noise when appropriately tuned.
 
-<img src="Images_applied/active_countors_org.jpg"> <img src="Images_applied/active_countors_app.jpg">
+<img src="Images_applied/active_countors_org.png"> <img src="Images_applied/active_countors_app.png">
 
 <img src="misc/bline.gif">
 
@@ -55,3 +55,23 @@ In the context of image segmentation, K-Means is especially effective in separat
 <img src="Images_applied/kmeans_4.png" height="180" width="250"> <img src="Images_applied/kmeans_8.png" height="180" width="250">
 
 K-Means Clustering for 2,4 and 8 Clusters Chosen
+
+<img src="misc/bline.gif">
+
+## Otsu Thresholding
+
+Otsu’s Method is a global thresholding technique that automatically determines the optimal threshold value to separate foreground and background in a grayscale image. It assumes the image contains two classes of pixels and calculates the threshold that minimizes the intra-class variance or equivalently maximizes inter-class variance. This makes it particularly effective for segmenting high-contrast regions and binary partitioning in images. In image segmentation, Otsu’s method is commonly used for quick and efficient binarization of grayscale images without manually tuning the threshold value.
+
+
+<img src="Images_applied/otsu_org.jpg" height="180" width="250"> <img src="Images_applied/otsu_applied.jpg" height="180" width="250"> 
+
+![Screenshot 2025-04-22 184515](https://github.com/user-attachments/assets/17d2654c-ff3a-4c45-a8c8-f8aba7cf9a13)
+Chosen Threshold by Otsu Algorithm
+
+<img src="misc/bline.gif">
+
+## Watershed Segmentation
+
+The Watershed algorithm is a powerful image segmentation technique that treats the grayscale image as a topographic surface, where pixel intensities represent elevation. The algorithm simulates a flooding process, where water is poured onto the surface from predefined markers, filling basins and creating watershed lines that separate different catchment areas.
+
+<img src="Images_applied/watershed_org.jpg" > <img src="Images_applied/watershed_applied.jpg"> 
