@@ -66,6 +66,7 @@ Otsu’s Method is a global thresholding technique that automatically determines
 <img src="Images_applied/otsu_org.jpg" height="180" width="250"> <img src="Images_applied/otsu_applied.jpg" height="180" width="250"> 
 
 ![Screenshot 2025-04-22 184515](https://github.com/user-attachments/assets/17d2654c-ff3a-4c45-a8c8-f8aba7cf9a13)
+
 Chosen Threshold by Otsu Algorithm
 
 <img src="misc/bline.gif">
@@ -75,3 +76,23 @@ Chosen Threshold by Otsu Algorithm
 The Watershed algorithm is a powerful image segmentation technique that treats the grayscale image as a topographic surface, where pixel intensities represent elevation. The algorithm simulates a flooding process, where water is poured onto the surface from predefined markers, filling basins and creating watershed lines that separate different catchment areas.
 
 <img src="Images_applied/watershed_org.jpg" > <img src="Images_applied/watershed_applied.jpg"> 
+
+<img src="misc/bline.gif">
+
+## Graph Cut Segmentation
+
+The Graph Cut algorithm is a segmentation technique that models the image as a graph, where pixels are nodes and edges represent the relationship between them, such as intensity differences. The algorithm aims to partition the graph into two disjoint sets of foreground and background and finds the minimum cut, which is the set of edges with the smallest total weight that, when removed, separates the graph into the desired segments. This is done using a GrabCut algorithm over a number of set iterations (5 iterations were chosen for this project)
+
+<img src="Images_applied/graphcut_org.png" > <img src="Images_applied/graphcut_applied.png"> 
+
+<img src="misc/bline.gif">
+
+## Region Growing
+
+The Region Growing algorithm is a simple yet effective image segmentation technique that starts from a seed point and expands the region by adding neighboring pixels that have similar properties, such as intensity.
+
+<img src="Images_applied/region_growing_org.jpg" > <img src="Images_applied/region_growing_applied.jpg"> 
+
+<img src="misc/bline.gif">
+
+This image segmentation application provides a robust and user-friendly interface for applying various segmentation algorithms to images. Its modular design allows for easy extension and modification, while the comprehensive GUI makes it accessible to users without programming experience. The implementation of multiple algorithms provides flexibility in handling different types of images and segmentation requirements.The combination of GTK3 for the interface and OpenCV for image processing creates a powerful tool that can be used in various applications, from medical image analysis to computer vision research. The real-time feedback and parameter adjustment capabilities make it particularly useful for experimental and educational purposes
