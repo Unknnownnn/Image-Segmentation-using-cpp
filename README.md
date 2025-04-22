@@ -29,4 +29,29 @@ The **Backtracking Edge Enhanced** method goes a step further by applying advanc
 
 <img src="misc/bline.gif">
 
-## Backtracking Segmentation
+## Active Contours
+
+Active Contours, or “Snakes,” is a dynamic, energy-minimization based image segmentation technique. It starts with an initial contour and iteratively deforms it to tightly wrap around the object boundaries by minimizing an energy functional. This method is especially powerful for detecting complex, smooth, and continuous object edges in an image. It balances between keeping the contour smooth (internal energy) and aligning it to object features like edges (external energy).
+
+The contour evolution is driven by three forces:
+- Elasticity (α): Keeps points on the contour close to each other.
+- Curvature (β): Smoothens the contour to avoid sharp corners.
+- Image Forces (γ): Pull the contour toward image features (e.g., edges).
+
+In our implementation, we use Canny edge detection to guide the snake. We also apply contour selection, iterative contour updates, and visual feedback to finalize the segmentation. The method is capable of handling moderately complex shapes and is resistant to noise when appropriately tuned.
+
+<img src="Images_applied/active_countors_org.jpg"> <img src="Images_applied/active_countors_app.jpg">
+
+<img src="misc/bline.gif">
+
+## K-Means Clustering
+
+K-Means Clustering is an unsupervised machine learning algorithm that segments an image based on pixel intensity similarity by grouping pixels into k clusters. It treats each pixel as a data point in a feature space and assigns it to one of k clusters such that intra-cluster similarity is high and inter-cluster similarity is low. 
+
+In the context of image segmentation, K-Means is especially effective in separating regions with distinct intensity or color characteristics. Unlike backtracking or active contours which rely on connectivity or edges, K-Means uses a global optimization strategy, making it robust for texture-less regions and segmentation based on intensity distributions
+
+<img src="Images_applied/kmeans_org.jpg" height="180" width="250"> <img src="Images_applied/kmeans_2.png" height="180" width="250"> 
+
+<img src="Images_applied/kmeans_4.png" height="180" width="250"> <img src="Images_applied/kmeans_8.png" height="180" width="250">
+
+K-Means Clustering for 2,4 and 8 Clusters Chosen
