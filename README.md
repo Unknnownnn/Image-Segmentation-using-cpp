@@ -17,7 +17,7 @@ The **Backtracking Edge Enhanced** method goes a step further by applying advanc
 
 ### Basic Backtracking
 
-<img src="Images_applied/backtracking_simple_original.jpg"> <img src="Images_applied/backtracking_simple_applied.jpg">
+<img src="Images_applied/backtracking_simple_original.jpg"> <img src="Images_applied/backtracking_simple_applied.png">
 
 ### Backtracking Enhanced
 
